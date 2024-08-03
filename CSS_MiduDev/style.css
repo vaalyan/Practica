@@ -1,0 +1,15 @@
+.container {
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 36px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+body {
+    background: #09f;
+    margin: 0;
+}
