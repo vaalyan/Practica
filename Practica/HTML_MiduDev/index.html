@@ -1,0 +1,275 @@
+<!DOCType html> <!--Aquí tus comentarios-->
+<html> <!--todo el contedino dividido en dos-->
+    <head> <!--Elemento con metadatos-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> <!--Adaptabilidad pantalla-->
+        <title>Portfolio Vaalyan</title>
+
+        <meta name="description" content="Portfolio de Vaalyan, estudiante de Análisis y Desarrollo de Software - SENA"> <!--Puede aparecer en la busqueda en Google-->
+
+        <!--OPEN GRAPH-->
+        <meta property="og:title" content="Portfolio de un estudiante de ADSO"> <!--Va vínculado con OPEN GRAPH - revisar documentación-->
+        <meta property="og:image" content=""> <!--Anexar imágenes-->
+        <meta property="og:image:alt" content=""> <!--Descripción de la imagen-->
+
+
+        <link rel="alternate" href="https://vaalyan.dev/en"
+        hreflang="en-GB"> <!--Anexar recurso externo-->
+        <link rel="canonical" href="https://vaalyan.dev"> <!--Indica la página principal-->
+
+        <meta name="robots" content="index, follow"> <!--Importante para google - se le indica si se tiene que indexar la pg y seguir enlaces-->
+        <meta name="theme-color" content="#09f"> <!--Da un color en la barra - no me sirve :c-->
+
+        <link rel="icon" type="image/png" href="/images/Grey.png"> <!--Enlaza un recurso - relaciona - pone un icono en la barra-->
+
+        <link rel="stylesheet" href="style.css"> <!--Enlaza archivos CSS-->
+        
+        <!--Style permite agregar CSS en los HTML-->
+        <style>
+            body { 
+                background: #e5e5e5
+            }
+        </style>
+
+        <style>
+            h1 { /*el selector selecciona toda la etiqueta referida*/
+                /*color: #252525 hexadecimal*/
+                /*opacidad rgba(0, 0, 0, 50%)*/
+                /*rgb(0 0 0 / 50%) más recomendado*/
+                /*hsl(60, 100%, 20%)*/ 
+                color: #09f;
+                border-width: 3px;
+                border-style: solid;
+                border-color: currentColor;
+                font-family: monospace;
+            }
+
+            body {
+                background: #e8e8e8;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            a {
+                color: #09f;
+            }
+
+            a:hover {
+                outline: 2px solid #09f;
+            }
+
+            a:active {
+                outline: 2px solid purple ;
+            }
+
+            a:focus {
+                border: 1px solid firebrick;
+            }
+
+            /*con el # se seleccionan los id*/
+            #show {
+                background: #09f; 
+                color: #e5e5e5;
+                border: 0;
+            }
+
+            .description {
+                border: 1px solid red;
+            }
+
+            li:first-child {
+                color: pink;
+            }
+
+            li:last-child {
+                color: purple;
+            }
+        </style>
+
+    </head>
+
+    <body> <!--Funciona para tener todo el contenido del documento-->
+        <header> 
+            <h1>Portfolio Dan Rodríguez @vaalyan.dev</h1> 
+
+            <!--iframe permite agregar páginas-->
+            <iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/3nYLTiY5skU?si=d5YVsbxabesM_DsY" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+
+            <nav> <!--Navegación-->
+                <a href="#Experiencia">Experiencia</a> <!--Enlaces internos - agregar un id al destino-->
+                <a href="#Proyectos">Proyectos</a>
+                <a href="https://twitch.tv/vaalyan32" target="_blank" rel="noreferrer">Twitch</a> <!--Enlaces externos, redirecciona la página, target para nuevas pestañas, rel noreferrer menos información-->
+            </nav>
+        </header>
+
+        <dialog id="dialog"> <!--Encima del contenido-->
+            <h1>¿Sabías que puedes abrir una modal así?</h1>
+            <p>¡Y es totalmente nativo!</p>
+            <button id="hide">Cerrar modal</button>
+        </dialog>
+
+        <button id="show">Ver más información</button>
+
+        <script>
+            window.show.addEventListener('click' , () => {
+                window.dialog.showModal()
+            }) 
+
+            window.hide.addEventListener('click', () => {
+                window.dialog.close()
+            })
+
+        </script> <!--dar id crea propiedades en window con el nombre de la id - no es recomendado-->
+
+        <audio controls src="/images/Doom OST - E1M1 - At Dooms Gate.mp3"></audio>
+        <div>
+            <video autoplay loop muted src="/images/video (1080p).mp4"
+            width="500"></video> <!--Agregar videos - controls, autoplay, muted-->
+        </div>
+
+        <main> <!--Engloba el contenido principal de un docuemnto-->
+            <a download href="/images/Corypheus-new.webp"> <!-- solo href dirige a la imagen - con download descarga-->
+                <img
+                width="300"
+                id="photo image"
+                title="Dan" 
+                alt="Fotografía de @vaalyan bien serio" 
+                src="/images/Corypheus-new.webp"> <!--No tiene etiqueta de cierre-->
+                    <!--src es una fuente
+                    - style en img width 100% y aspect-ratio + relación - responsivo
+                    - dar identidicador
+                    - width height alto y ancho img
+                    - con alt se da una descripción aleatoria 
+                    - title descripción breve, texto flotante
+                    - hidden oculta elementos
+                    - loading lazy gasta menos recursos en cargar imágenes-->
+            </a>
+            <p class="description">Estudiante <strong>Tecnólogo en Análisis y Desarrollo de Software</strong> - SENA</p>
+
+            <h2 id="#Experiencia">Experiencia</h2>
+            
+            <ul> <!--Etiqueta lista desordenada-->
+                <li class="list-item">HTML5 - 2023</li> <!--Etiqueta de lista-->
+                <li class="list-item">CSS3 - 2023</li> <!--Con la etiqueta de lista no siempre es necesario cerrarla. No es recomendable-->
+                <li class="list-item">JavaScript - 2023</li>
+            </ul> 
+            
+
+            <h2 id="#Proyectos">Proyectos realizados</h2>
+
+            <aside> <!--Contenido relacionado con el tema - a un lado-->
+                <header> <!--Se pueden disponer en diferentes partes-->
+                    <h3>Mis tecnologías favoritas</h3>
+                </header>
+                    <ol type="1" start="4"> <!--Etiqueta lista ordenada - se puede cambiar el type-->
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ol>
+            </aside>
+
+            <section> <!--Secciones independientes del documento-->
+                <article> <!--información propia contenida. no cambia el sentido en otro sitio-->
+                    <header>
+                        <h3>Sitio Web Corporativo</h3> <!--Los encabezados deben de ir bajando de numero-->
+                    </header>
+                    <p>
+                        Diseño de un Witio Web Corporativo con una interfaz 
+                        amigable y moderna.
+                    </p>
+                    <footer>
+                        <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small> <!--Empleado en temas de copyright - explicación secundaria - Referencias, contexto-->
+                    </footer>
+                </article>
+            </section>
+
+            <section>
+                <h3>Preguntas Frecuentes</h3>
+
+                <details>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>Estidié un Tecnólogo en Análisis y Desarrollo de Software en el SENA durante 2 años y medio.</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuáles son tus hobbies?</summary>
+                    <p>Me gusta mucho realizar iluestraciones y pintarlas con acuarelas.</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuál es tu lenguaje favorito?</summary>
+                    <p>Me encanta JavaScript, es un lenguaje muy versátil con el que se pueden desarrollar muchas cosas.</p>
+                </details>
+            </section>
+
+            <section>
+                <h3>Formulario de Contacto</h3>
+
+                <form method="post" action="/">
+                    <fieldset><!--Agrupación inputs-->
+                        <legend>Información personal</legend>
+
+                        <label style="display: block;">Nombre: <!--Envolver al input con label, dando redirección a la etiqueta del formulario-->
+                             <input type="text" name="name" placeholder="Dan Rodríguez" required>
+                        </label> <!--Se puede aplicar un style en los label para evitar el uso de divs-->
+                        
+                        <label style="display: block;">Email:
+                            <input type="email" name="email" placeholder="vaalyan32@gmail.com" required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información Adicional</legend>
+
+                        <label style="display: block;">Teléfono:
+                            <input type="tel" name="phone" placeholder="Dan Rodríguez" required pattern="[0-9]{9}"> <!--Agregar el requiered con información obligatoria-->
+                       </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otros</legend>
+                        
+                        <label style="display: block;">¿Por qué quieres contactar?</label>
+                        <select name="why" id="why">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Dudas</option>
+                            <option value="3">Más información</option>
+                        </select>
+
+                        <label style="display: block;">¿Aceptas los Términos?</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Ayudas</legend>
+                        <datalist id="languages"> <!--Permite realizar autocompletados-->
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                        </datalist>
+                        <label>
+                            ¿Con qué lenguaje quieres que te ayude?
+                            <input list="languages" name="languages">
+                        </label>
+                    </fieldset>
+
+                    <input type="submit" value="Enviar Contacto"> <!--Los input con type submit se pueden reemplazar con button, siguiendo su semántica 
+                        - los botones dentro de formularios son tipo submit-->
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            Copyright © 2023 - El Portfolio más bello del mundo.
+
+            <a href="mailto:vaalyan32@gmail.com">Envíame un correo</a> <!--Anclas con funciones de referir-->
+            <a href="tel:+573215684033">Llamáme</a>
+            <a href="whatsapp://send?text=">Envíame un WhatsApp</a>
+        </footer>
+    </body>
+</html>
