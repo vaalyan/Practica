@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <button onclick="verifica()">Adivina el número</button>
+    
+    <script>
+        var num = Math.round(Math.random() * 10);
+        console.log("El número a adivinar es:", num);
+
+        function verifica() {
+            var input = document.getElementById("input");
+            if(parseInt(input.value) === num) {
+                alert("¡Felicitaciones, ese era el número!");
+            } else {
+                alert("Lo siento, inténtalo de nuevo.");
+            }
+            input.value = "";
+            input.focus();
+        }
+    </script>
+</body>
+</html>
