@@ -8,3 +8,11 @@ si es un múltiplo de 5 o no.
 Si es múltiplo debe imprimir "Si, el número x es múltiplo 5", 
 de lo contrario debe imprimir "No, el número x no es múltiplo de 5".
 */
+
+var num = prompt("Escribe un número aleatorio.");
+
+if(num % 5 === 0) {
+    console.log(`Sí, el número ${num} es múltiplo de 5`)
+} else {
+    console.log(`No, el número ${num} no es múltiplo de 5`)
+}
