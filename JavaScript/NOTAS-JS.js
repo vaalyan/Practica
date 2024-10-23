@@ -14,13 +14,13 @@ const numEntero = 40;
 const numReal = 41.2;
 const datoBoolean = true;
 const datoBooleanDos = false;
-const arr = ["pepe", "german", "daniel"]; //array - arrego
+const arr = ["pepe", "german", "daniel"]; //array
 const str = "Daniel";
 
 
-// Aritmetica
+// Aritmética
 
-    // operadores logicos + - / % <> ! =
+    // operadores lógicos + - / % <> ! =
 
 const numDos = 20;
 const numUno = 10;
