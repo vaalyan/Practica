@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+header {
+    background-color:steelblue;
+    height: auto;
+}
+
+main {
+    background-color: antiquewhite;
+    height: auto;
+}
+
+footer {
+    background-color: aquamarine;
+}
+
+div {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1ft auto;
+}
