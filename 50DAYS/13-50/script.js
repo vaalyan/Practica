@@ -17,7 +17,7 @@ textarea.addEventListener('keyup', (e) => {
 
 function createTags(input) {
     const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
-
+    
     tagsEl.innerHTML = ''
 
     tags.forEach(tag => {
@@ -33,14 +33,14 @@ function randomSelect() {
 
     const interval = setInterval(() => {
         const randomTag = pickRandomTag()
+	
+	if (randomTag !== undefined) {
+        highlightTag(randomTag)
 
-        if (randomTag !== undefined) {
-            highlightTag(randomTag)
-
-            setTimeout(() => {
-                unHighlightTag(randomTag)
-            }, 100)
-        }
+        setTimeout(() => {
+            unHighlightTag(randomTag)
+        }, 100)
+	}
     }, 100);
 
     setTimeout(() => {
