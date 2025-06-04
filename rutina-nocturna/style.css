@@ -1,0 +1,32 @@
+body {
+    background: #0e0f1a;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#checklist {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#checklist li {
+    margin-bottom: 10px;
+}
+
+#breathing-circle {
+    margin: 30px auto;
+    width: 100px;
+    height: 100px;
+    background-color: #5a6cf3;
+    border-radius: 50%;
+    transition: transform 4s ease-in-out;
+}
